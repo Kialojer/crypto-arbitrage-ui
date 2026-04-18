@@ -41,7 +41,7 @@ export default function Dashboard() {
         return;
       }
 
-      await fetchEventSource("http://localhost:8000/api/chat", {
+      await fetchEventSource(`${process.env.NEXT_PUBLIC_API_URL}/api/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
